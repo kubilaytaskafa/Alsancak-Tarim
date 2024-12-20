@@ -7,16 +7,27 @@
   --light-text: #fff;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-text);
+}
+
+main {
+  flex: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--dark-text);
 }
 
 /* Header Stili */

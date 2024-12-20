@@ -13,24 +13,30 @@
   --hover-color: #9e211e;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
-
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  height: 100%;
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  flex: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .container {
