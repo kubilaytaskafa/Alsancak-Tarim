@@ -60,7 +60,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .logo h1 {
@@ -99,6 +102,10 @@ header {
   font-size: 24px;
   color: var(--primary-color);
   transition: var(--transition);
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hamburger .menu-icon {
@@ -402,6 +409,10 @@ footer {
 
 /* Responsive Tasarım */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
   .hamburger {
     display: block;
     touch-action: manipulation;
