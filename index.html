@@ -92,7 +92,7 @@
     <section id="anasayfa" class="hero">
       <div class="hero-content">
         <h1>Tarımda Güvenilir Çözüm Ortağınız</h1>
-        <p>40 yıllık tecrübemizle tarım sektörüne kaliteli hizmet sunuyoruz</p>
+        <p>40 yıllık tecrübemizle tarım sektör��ne kaliteli hizmet sunuyoruz</p>
         <a href="#iletisim" class="cta-button" title="İletişim için tıklayın"
           >Bizimle İletişime Geçin</a
         >
@@ -397,15 +397,15 @@
           e.preventDefault();
           const targetId = this.getAttribute("href");
           const targetElement = document.querySelector(targetId);
-          const offset = 70; // Kaydırma mesafesi (piksel)
-          const targetPosition =
-            targetElement.getBoundingClientRect().top +
-            window.pageYOffset -
-            offset;
+          const headerOffset = 80;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
 
           window.scrollTo({
-            top: targetPosition,
+            top: offsetPosition,
             behavior: "smooth",
+            duration: 1000,
           });
         });
       });
