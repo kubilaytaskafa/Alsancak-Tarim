@@ -9,7 +9,7 @@
   --text-light: #718096;
   --white: #ffffff;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease-in;
+  --transition: all 0.3s ease-in-out;
   --hover-color: #9e211e;
 }
 
@@ -17,16 +17,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -385,6 +389,7 @@ footer {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    touch-action: manipulation;
   }
 
   .nav-links {
@@ -397,11 +402,18 @@ footer {
     flex-direction: column;
     padding: 1rem;
     text-align: center;
+    box-shadow: var(--shadow);
   }
 
   .nav-links.active {
     display: flex;
     background-color: var(--white);
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    width: 100%;
+    touch-action: manipulation;
   }
 
   .hero-content h2 {
@@ -412,6 +424,17 @@ footer {
     flex-direction: column;
     gap: 2rem;
     text-align: center;
+  }
+
+  .product-card,
+  .service-card {
+    touch-action: manipulation;
+  }
+
+  .product-card a,
+  .service-card a {
+    display: block;
+    padding: 0.5rem;
   }
 }
 
