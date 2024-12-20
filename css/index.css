@@ -34,9 +34,10 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px; /* Hatalı 'e' harfini kaldırdım */
+  padding: 0 20px;
 }
 
 /* Header ve Navigasyon */
@@ -126,7 +127,8 @@ header {
 
 .hero-content {
   color: var(--white);
-  max-width: 800px;
+  max-width: 1000px;
+  width: 90%;
   padding: 0 20px;
 }
 
@@ -200,9 +202,11 @@ section h2 {
 /* Ürünler Bölümü */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 0 20px;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .product-card {
@@ -212,6 +216,8 @@ section h2 {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
+  max-width: 400px;
+  margin: 0 auto;
 }
 .product-card a {
   text-decoration: none;
@@ -232,10 +238,10 @@ section h2 {
   margin-bottom: 1rem;
 }
 .product-card img {
-  width: 30vh;
-  height: 30vh;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
   border-radius: 10px;
 }
 
@@ -246,8 +252,10 @@ section h2 {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .service-card {
@@ -257,6 +265,8 @@ section h2 {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 .service-card:hover {
@@ -279,11 +289,10 @@ section h2 {
   border-radius: 10px;
 }
 .service-card img {
-  width: 30vh;
-  height: 30vh;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
 }
 /* İletişim Bölümü */
 .contact-content {
@@ -399,7 +408,7 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--secondary-color);
+    background-color: var(--white);
     flex-direction: column;
     padding: 1rem;
     text-align: center;
@@ -408,17 +417,20 @@ footer {
 
   .nav-links.active {
     display: flex;
-    background-color: var(--white);
   }
 
   .nav-links a {
-    padding: 1rem;
+    padding: 0.8rem;
     width: 100%;
     touch-action: manipulation;
   }
 
   .hero-content h2 {
-    font-size: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 
   .footer-content {
@@ -427,15 +439,29 @@ footer {
     text-align: center;
   }
 
+  .product-grid,
+  .service-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
   .product-card,
   .service-card {
     touch-action: manipulation;
+    max-width: 100%;
   }
 
-  .product-card a,
-  .service-card a {
-    display: block;
-    padding: 0.5rem;
+  .product-card img,
+  .service-card img {
+    max-height: 250px;
+  }
+
+  .info-item a {
+    font-size: 16px;
+  }
+
+  .info-item a p {
+    font-size: 16px;
   }
 }
 
@@ -444,11 +470,84 @@ footer {
     font-size: 1.8rem;
   }
 
+  .hero-content p {
+    font-size: 1rem;
+  }
+
   section h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .about-text ul {
     flex-direction: column;
+  }
+
+  .product-card,
+  .service-card {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 3rem;
+  }
+
+  .about-content {
+    max-width: 1200px;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .about-text ul {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-card {
+    max-width: 450px;
+  }
+
+  .service-card {
+    max-width: 500px;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+  }
+
+  .hero-content h1 {
+    font-size: 4.5rem;
+  }
+
+  .about-content {
+    max-width: 1400px;
   }
 }
