@@ -1,0 +1,227 @@
+/* Genel Stiller */
+:root {
+  --primary-color: #0066cc;
+  --secondary-color: #4a5568;
+  --accent-color: #48bb78;
+  --light-bg: #f7fafc;
+  --dark-bg: #2d3748;
+  --text-dark: #1a202c;
+  --text-light: #718096;
+  --white: #ffffff;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --hover-color: #9e211e;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--light-bg);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Grid Sistemi */
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Header Stili */
+.header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.header-description {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-description p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .header-description {
+    max-width: 100%;
+    padding: 0 0.8rem;
+  }
+
+  .header-description p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 1rem 0;
+  }
+
+  .header-description p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Card Genel Stilleri */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin: 1rem 0;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0 1rem;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+
+.card p {
+  color: var(--text-light);
+  margin: 0 1rem;
+  line-height: 1.6;
+}
+
+/* Liste Stilleri */
+.list-unstyled {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.list-unstyled li {
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.list-unstyled strong {
+  color: var(--text-dark);
+  margin-right: 0.5rem;
+}
+
+/* Footer Stili */
+.footer {
+  background: var(--white);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Ürün Butonu Stili */
+.urun-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.urun-btn:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 992px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .card-img {
+    height: 180px;
+  }
+
+  .urun-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .card-img {
+    height: 180px;
+  }
+
+  .urun-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
