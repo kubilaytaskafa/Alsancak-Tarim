@@ -220,12 +220,12 @@ section h2 {
 
 /* Ürünler Bölümü */
 .products {
-  background-color: #e9e9e9;
+  background-color: #ededed;
   padding: 80px 0;
 }
 
 .products-container {
-  background-color: #e9e9e9;
+  background-color: #ededed;
   width: 100%;
 }
 
@@ -329,7 +329,7 @@ section h2 {
 }
 /* İletişim Bölümü */
 .contact {
-  background-color: #e9e9e9;
+  background-color: #ededed;
   padding: 80px 0;
 }
 
@@ -339,7 +339,7 @@ section h2 {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  background-color: #e9e9e9;
+  background-color: #ededed;
   width: 100%;
 }
 
