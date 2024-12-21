@@ -48,7 +48,7 @@ main {
 
 /* Header ve Navigasyon */
 header {
-  background-color: var(--light-bg);
+  background-color: rgba(185, 185, 185, 0.471);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
@@ -89,7 +89,7 @@ header {
 }
 
 .nav-links a {
-  color: var(--text-color);
+  color: rgb(1, 1, 158);
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition);
