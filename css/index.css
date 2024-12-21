@@ -55,7 +55,7 @@ header {
   top: 0;
   z-index: 1000;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  border-top: 3px solid rgb(166, 166, 166);
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
   /* box-shadow: 1px 1px 1px 1px gray; */
 }
 
