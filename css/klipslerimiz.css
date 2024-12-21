@@ -126,7 +126,7 @@ main {
 
 /* Footer Stili */
 footer {
-  background-color: var(--primary-color);
+  background-color: #0164AB;
   color: var(--light-text);
   padding: 3rem 0 1rem;
   width: 100%;

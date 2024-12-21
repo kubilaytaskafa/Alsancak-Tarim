@@ -410,7 +410,7 @@ section h2 {
 
 /* Footer */
 footer {
-  background-color: var(--primary-color);
+  background-color: #0164ab;
   color: var(--white);
   padding: 3rem 0 1rem;
   width: 100%;
