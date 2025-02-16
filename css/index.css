@@ -137,16 +137,26 @@ header {
 
 /* Hero Bölüm */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    url("../images/sera.webp");
-  background-size: cover;
-  background-position: center;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding-top: 80px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hero img {
+  width: 100vw;
+  height: 100%;
+  object-fit: contain;
+  max-height: calc(100vh - 80px);
+  padding: 0;
+  margin: 0;
 }
 
 .hero-content {
@@ -154,16 +164,21 @@ header {
   max-width: 1000px;
   width: 90%;
   padding: 0 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
-.hero-content h2 {
+.hero-content h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
 .hero-content p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
 }
 
 .cta-button {
@@ -174,6 +189,7 @@ header {
   text-decoration: none;
   border-radius: 5px;
   transition: var(--transition);
+  margin-bottom: 2rem;
 }
 
 .cta-button:hover {
@@ -497,6 +513,14 @@ footer {
     padding: 0.8rem;
     width: 100%;
     touch-action: manipulation;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .hero img {
+    max-height: calc(100vh - 60px);
   }
 
   .hero-content h2 {
