@@ -29,7 +29,13 @@
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
       <span class="close-lightbox">&times;</span>
+      <button class="nav-btn prev-btn" id="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
       <img class="lightbox-content" id="lightbox-img" />
+      <button class="nav-btn next-btn" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
 
     <!-- Header -->
@@ -225,39 +231,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script>
-      // Tüm galeri resimlerini seç
-      const galleryImages = document.querySelectorAll(".gallery-img");
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-      const closeLightbox = document.querySelector(".close-lightbox");
-
-      // Her resme tıklama olayı ekle
-      galleryImages.forEach((img) => {
-        img.addEventListener("click", () => {
-          lightbox.style.display = "flex";
-          lightboxImg.src = img.src;
-          lightboxImg.alt = img.alt;
-        });
-      });
-
-      // Lightbox'ı kapatma işlemleri
-      closeLightbox.addEventListener("click", () => {
-        lightbox.style.display = "none";
-      });
-
-      lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
-          lightbox.style.display = "none";
-        }
-      });
-
-      // ESC tuşu ile kapatma
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && lightbox.style.display === "flex") {
-          lightbox.style.display = "none";
-        }
-      });
-    </script>
+    <script src="js/galeri.js"></script>
   </body>
 </html>
